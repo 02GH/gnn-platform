@@ -1,0 +1,26 @@
+# python main.py --config configs/nell.yaml
+
+model:
+  name: GCN
+  hidden_dim: 64
+  dropout: 0.5
+
+training:
+  lr: 0.01
+  weight_decay: 0.0005
+  epochs: 200
+  patience: 100
+  scheduler: true
+  tensorboard: true
+
+experiment:
+  save_best: true
+  save_last: true
+  log_interval: 1
+
+data:
+  name: NELL
+  root: data/NELL
+
+seed: 42
+device: cuda
